@@ -2,7 +2,7 @@
 #include<unistd.h>
 /**
  * main - A C program that prints a line to the standarad error
- * Return: 1 (error)
+ * Return 1 (sucsses)
  */
 
 int main(void)
