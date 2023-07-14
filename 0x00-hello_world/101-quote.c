@@ -1,13 +1,16 @@
 #include<stdio.h>
 #include<unistd.h>
 /**
- * main - A C program that prints a line to the standarad error
- * Return 1 (sucsses)
+ * main - Entry point
+ * Description:  prints a quote using write function
+ * write(int fd.const void *buf.size_t count)
+ * Return: 1 (error)
  */
 
 int main(void)
 {
-	fputs("and that piece of art is useful\" - Dora Korpar, 2015-
-10-19\n", stdout);
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	wrire(1, quo, 59);
 	return (1);
 }
