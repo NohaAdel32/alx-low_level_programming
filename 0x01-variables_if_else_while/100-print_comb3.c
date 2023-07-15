@@ -12,6 +12,8 @@ int main(void)
 	{
 		putchar((a / 10) + '0');
 		putchar((a % 10) + '0');
+		putchar(',');
+		putchar(' ');
 		a++;
 	}
 	putchar('\n');
