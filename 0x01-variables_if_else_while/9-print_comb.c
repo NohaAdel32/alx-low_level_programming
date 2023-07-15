@@ -14,7 +14,7 @@ int main(void)
 
 		if (digit != 57)
 		{
-			puthar(',');
+			putchar(',');
 			putchar(' ');
 		}
 		digit++;
