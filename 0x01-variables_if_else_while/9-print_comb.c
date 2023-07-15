@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-	char ch = '0';
+	int digit = 48, n = 57;
 
-	while (ch <= '8')
+	while (digit <= 56)
 	{
-		putchar(ch);
+		putchar(digit);
 		putchar(',');
 		putchar(' ');
 		ch++;
 	}
 
-	putchar('9');
+	putchar(n);
 	return (0);
 }
