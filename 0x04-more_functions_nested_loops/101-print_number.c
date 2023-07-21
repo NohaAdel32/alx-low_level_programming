@@ -9,33 +9,22 @@
 
 void print_number(int n)
 {
-	unsigned int u, i, m;
+	unsigned int u, i;
 
 	if (n < 0)
 	{
-		_putchar('-');
 		u = -n;
+		_putchar('-');
 	}
 	else
 	{
 		u = n;
 	}
-	if (u >= 0 && u <= 9)
-	{
-		_putchar(u + '0');
-	}
-	else
-	{
-		i = 1000000;
-		while (i >= 10)
-		{
-			if (u >= i)
-			{
-				_putchar((u / i) + '0');
-				m = u % i;
-			}
-			i /= 10;
-		}
-		_putchar((m % 10) + '0');
-	}
+
+	i = 1000000000;
+	do {
+		if (i <= u || i == 1)
+			_putchar(u / i % 10 + '0');
+		i /= 10;
+	} while (i != 0);
 }
