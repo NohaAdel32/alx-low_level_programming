@@ -1,29 +1,24 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-#include <unistd.h>
-
+#include <time.h>
 /**
- * main - creates randomized valid passwords for
- * 101-crackme printed to standard out
- *
- * Return: 0 on success
+ * main - generates keygen.
+ * Return: 0 Always.
  */
 int main(void)
 {
-	int sum = 0;
-	char randchar;
+	int r = 0, c = 0;
+	time_t t;
 
-	srand(time(0));
-
-	while (sum <= 2646)
+	srand((unsigned int) time(&t));
+	while (c < 2772)
 	{
-		randchar = rand() % 128;
-		write(1, &randchar, 1);
-		sum += randchar;
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
 	}
-
-	randchar = 2772 - sum;
-	write(1, &randchar, 1);
+	printf("%c\n", (2772 - c));
 	return (0);
 }
