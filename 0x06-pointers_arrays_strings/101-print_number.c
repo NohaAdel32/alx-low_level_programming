@@ -8,27 +8,31 @@
 void print_number(int n)
 {
 	unsigned int i;
-	int m;
+	int m, n1;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		n1 =  -n;
+	}
+	else
+	{
+		n1 = n;
 	}
 
-	if (n <= 9)
+	if (n1 <= 9)
 	{
-		_putchar(n + '0')
+		_putchar(n1 + '0')
 	}
 	else
 	{
 		i = 100000000;
 
-		while (n >= i)
+		while (n1 >= i)
 		{
-			m = n / i;
+			m = n1 / i;
 			_putchar(m + '0');
-			n %= i;
+			n1 %= i;
 			i /= 10;
 		}
 	}
