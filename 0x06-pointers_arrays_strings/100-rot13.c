@@ -8,7 +8,6 @@
 
 char *rot13(char *s)
 {
-	char *r = s;
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i;
@@ -24,5 +23,5 @@ char *rot13(char *s)
 		}
 		s++;
 	}
-	return (r);
+	return (s);
 }
