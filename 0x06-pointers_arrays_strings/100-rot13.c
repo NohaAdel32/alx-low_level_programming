@@ -13,7 +13,7 @@ char *rot13(char *s)
 	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i;
 
-	while (*s)
+	while (*s != '\0')
 	{
 		for (i = 0; a[i] != '\0'; i++)
 		{
