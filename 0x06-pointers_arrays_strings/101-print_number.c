@@ -28,13 +28,15 @@ void print_number(int n)
 	{
 		i = 100000000;
 
-		while (n1 >= i)
-		{
-			m = n1 / i;
-			_putchar(m + '0');
-			n1 %= i;
+		do {
+			if ((i <= n1) || (i == 1))
+			{
+				m = n1 / i;
+				_putchar(m + '0');
+				n1 %= i;
+			}
 			i /= 10;
-		}
+		} while (i != 0)
 	}
 }
 
