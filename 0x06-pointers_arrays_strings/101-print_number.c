@@ -13,30 +13,15 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n1 =  -n;
+		if (n < -9)
+			print_number(n / -10);
+		_putchar('0' - n % 10);
 	}
 	else
 	{
-		n1 = n;
-	}
-
-	if (n1 <= 9)
-	{
-		_putchar(n1 + '0')
-	}
-	else
-	{
-		i = 100000000;
-
-		do {
-			if ((i <= n1) || (i == 1))
-			{
-				m = n1 / i;
-				_putchar(m + '0');
-				n1 %= i;
-			}
-			i /= 10;
-		} while (i != 0)
+		if (n > 9)
+			print_number(n / 10);
+		_putchar(n % 10 + '0');
 	}
 }
 
