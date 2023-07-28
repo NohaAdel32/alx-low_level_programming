@@ -8,6 +8,7 @@
 
 char *leet(char *s)
 {
+	char *r = s;
 	char a[] = {'a', 'e', 'o', 't', 'l'};
 	char n[] = {4, 3, 0, 7, 1};
 	int i;
@@ -18,10 +19,10 @@ char *leet(char *s)
 		{
 			if ((*s == a[i]) || (*s == a[i] - 32))
 			{
-				*s = n[i] + 48;
+				*s = n[i] + '0';
 			}
 		}
 		s++;
 	}
-	return (s);
+	return (r);
 }
