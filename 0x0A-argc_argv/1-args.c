@@ -6,15 +6,15 @@
  *
  * Return: 0.
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
-	int i;
+	int counter;
 
-	for (i = 0; i < argc; argv++)
+	for (counter = 0; counter < argc;)
 	{
-		i++;
+		counter++;
+		(*argv)++;
 	}
-	printf("%d\n", i - 1);
-
+	printf("%d\n", counter - 1);
 	return (0);
 }
