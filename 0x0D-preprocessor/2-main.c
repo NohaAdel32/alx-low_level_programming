@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
- * main - Entry point
- * return: 0
+ * main - Print name of this file
+ * Return: 0
  */
 
 int main(void)
