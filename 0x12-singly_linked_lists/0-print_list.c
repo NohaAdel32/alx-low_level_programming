@@ -1,4 +1,4 @@
-#inlcude "list.h"
+#inlcude "lists.h"
 
 /**
  * print_list - function with one argument
