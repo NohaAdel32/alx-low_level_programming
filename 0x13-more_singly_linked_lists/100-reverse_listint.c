@@ -20,13 +20,13 @@ listint_t *reverse_listint(listint_t **head)
 
 	if ((*head)->next == NULL)
 		return (*head);
-	while (next || curr)
+	while (next || curr->next !=NULL)
 	{
 		next = curr->next;
 		curr->next = prev;
 		prev = curr;
 		curr = next;
 	}
-	*head = curr;
+	*head = prev;
 	return (*head);
 }
