@@ -1,4 +1,4 @@
-#include " main.h"
+#include "main.h"
 #include <fcntl.h>
 /**
  * read_textfile - that reads a text file and prints
