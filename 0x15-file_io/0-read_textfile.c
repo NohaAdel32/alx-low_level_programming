@@ -1,5 +1,6 @@
 #include "main.h"
 #include <fcntl.h>
+#include <unistd.h>
 /**
  * read_textfile - that reads a text file and prints
  * @filename: variable pointer
@@ -13,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t i;
 	int fd;
-	char buf[READ_Buf_SIZE * 8];
+	char buf[READ_BUF_SIZE * 8];
 
 	if (!filename || !letters)
 		return (0);
