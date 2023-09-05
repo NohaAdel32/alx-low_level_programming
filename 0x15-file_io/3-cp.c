@@ -2,6 +2,8 @@
 #include <fcntl.h>
 #include "main.h"
 #define _GNU_SOURCE
+#include <sys/types.h>
+#include <sys/stat.h>
 /**
 * main - program that copies the content of a file to another file
 * @argc: num argument
