@@ -12,7 +12,7 @@ int sum_dlistint(dlistint_t *head)
 	int sum = 0;
 	dlistint_t *cursor = head;
 
-	while (cursor && cursor->next)
+	while (cursor)
 	{
 		sum += cursor->n;
 		cursor = cursor->next;
